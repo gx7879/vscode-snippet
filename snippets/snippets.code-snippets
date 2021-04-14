@@ -1,0 +1,688 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	"Print to console": {
+		"scope": "javascript,typescript",
+		"prefix": "log",
+		"body": [
+			"console.log('$1');",
+			"$TM_FILENAME_BASE",
+			"$2"
+		],
+		"description": "Log output to console"
+	},
+	"添加註釋": {
+		"scope": "javascript,typescript",
+		"prefix": "comment",
+		"body": [
+			"/**",
+			" * Created by preference on $CURRENT_YEAR/$CURRENT_MONTH/$CURRENT_DATE",
+			" */",
+			"$0"
+		],
+		"description": "添加作者和時間註釋"
+	},
+	"metronic-form": {
+		"prefix": "met:form",
+		"body": [
+			"<form class=\"form\">",
+			"  <div class=\"card-body\">",
+			"    $0",
+			"  </div>",
+			"  <div class=\"card-footer\">",
+			"    <button type=\"button\" class=\"btn btn-primary mr-2\">Submit</button>",
+			"    <button type=\"reset\" class=\"btn btn-secondary\">Cancel</button>",
+			"  </div>",
+			"</form>"
+		],
+		"description": "metronic-from"
+	},
+	"metronic-form-group": {
+		"scope": "html,vue-html,mako",
+		"prefix": "met:from-group",
+		"body": [
+			"<div class=\"form-group\">",
+			"  <label>Text <span class=\"text-danger\">*</span></label>",
+			"  $0",
+			"  <span class=\"form-text text-muted\">We'll never share your email with anyone else.</span>",
+			"</div>"
+		],
+		"description": "metronic-form-group"
+	},
+	"metronic-form-inline-group": {
+		"scope": "html,vue-html,mako",
+		"prefix": "met:from-inline-group",
+		"body": [
+			"<div class=\"form-group row\">",
+			"  <label class=\"col-2 col-form-label\">Text <span class=\"text-danger\">*</span></label>",
+			"  <div class=\"col-10\">",
+			"    $0",
+			"    <span class=\"form-text text-muted\">We'll never share your email with anyone else.</span>",
+			"  </div>",
+			"</div>"
+		],
+		"description": "metronic-form-inline-group"
+	},
+	"metronic-input": {
+		"scope": "html,vue-html,mako",
+		"prefix": "met:input",
+		"body": [
+			"<input class=\"form-control\" type=\"text\" value=\"Artisanal kale\" id=\"example-text-input\" placeholder=\"${1:placeholder}\"/>",
+		],
+		"description": "metronic-input"
+	},
+	"metronic-solid-input": {
+		"scope": "html,vue-html,mako",
+		"prefix": "met:input-solid",
+		"body": [
+			"<input class=\"form-control form-control-solid\" type=\"text\" value=\"Artisanal kale\" id=\"example-text-input\" placeholder=\"${1:placeholder}\"/>",
+		],
+		"description": "metronic-solid-input"
+	},
+	"metronic-select": {
+		"scope": "html,vue-html,mako",
+		"prefix": "met:select",
+		"body": [
+			"<select id=\"exampleSelect1\" class=\"form-control\">",
+			"  <option value=\"\">1</option>",
+			"  <option value=\"\">2</option>",
+			"  <option value=\"\">3</option>",
+			"  <option value=\"\">4</option>",
+			"  <option value=\"\">5</option>",
+			"</select>",
+		],
+		"description": "metronic-select"
+	},
+	"metronic-solid-select": {
+		"scope": "html,vue-html,mako",
+		"prefix": "met:select-solid",
+		"body": [
+			"<select id=\"exampleSelect1\" class=\"form-control form-control-solid\">",
+			"  <option value=\"\">1</option>",
+			"  <option value=\"\">2</option>",
+			"  <option value=\"\">3</option>",
+			"  <option value=\"\">4</option>",
+			"  <option value=\"\">5</option>",
+			"</select>",
+		],
+		"description": "metronic-solid-select"
+	},
+	"metronic-select2": {
+		"prefix": "met:select2",
+		"body": [
+			"<select class=\"form-control select2\" id=\"kt_select2_1\" name=\"param\">",
+			"  <option value=\"AK\">Alaska</option>",
+			"  <option value=\"HI\">Hawaii</option>",
+			"  <option value=\"CA\">California</option>",
+			"</select>",
+			"<script>",
+			"  $('#kt_select2_1').select2({",
+			"    placeholder: \"Select a state\"",
+			"  });",
+			"</script>"
+		],
+		"description": "select2"
+	},
+	"metronic-textarea": {
+		"scope": "html,vue-html,mako",
+		"prefix": "met:textarea",
+		"body": [
+			"<textarea class=\"form-control\" rows=\"3\"></textarea>"
+		],
+		"description": "metronic-textarea"
+	},
+	"metronic-solid-textarea": {
+		"scope": "html,vue-html,mako",
+		"prefix": "met:textarea-solid",
+		"body": [
+			"<textarea class=\"form-control form-control-solid\" rows=\"3\"></textarea>"
+		],
+		"description": "metronic-textarea"
+	},
+	"metronic-outline-checkbox": {
+		"prefix": "met:outline-checkbox",
+		"body": [
+			"<div class=\"checkbox-list\">",
+			"  <label class=\"checkbox checkbox-outline checkbox-success\">",
+			"    <input type=\"checkbox\" name=\"Checkboxes15\"/>",
+			"    <span></span>",
+			"    Default",
+			"  </label>",
+			"  <label class=\"checkbox checkbox-outline checkbox-success\">",
+			"    <input type=\"checkbox\" name=\"Checkboxes15\" checked=\"checked\" />",
+			"    <span></span>",
+			"    Checked",
+			"  </label>",
+			"  <label class=\"checkbox checkbox-outline checkbox-success checkbox-disabled\">",
+			"    <input type=\"checkbox\" name=\"Checkboxes15\" disabled=\"disabled\"/>",
+			"    <span></span>",
+			"    Disabled",
+			"  </label>",
+			"</div>"
+		],
+		"description": "metronic-outline-checkbox"
+	},
+	"metronic-inline-outline-checkbox": {
+		"prefix": "met:outline-checkbox-inline",
+		"body": [
+			"<div class=\"checkbox-inline\">",
+			"  <label class=\"checkbox checkbox-outline checkbox-success\">",
+			"    <input type=\"checkbox\" name=\"Checkboxes15\"/>",
+			"    <span></span>",
+			"    Default",
+			"  </label>",
+			"  <label class=\"checkbox checkbox-outline checkbox-success\">",
+			"    <input type=\"checkbox\" name=\"Checkboxes15\" checked=\"checked\" />",
+			"    <span></span>",
+			"    Checked",
+			"  </label>",
+			"  <label class=\"checkbox checkbox-outline checkbox-success checkbox-disabled\">",
+			"    <input type=\"checkbox\" name=\"Checkboxes15\" disabled=\"disabled\"/>",
+			"    <span></span>",
+			"    Disabled",
+			"  </label>",
+			"</div>"
+		],
+		"description": "metronic-inline-outline-checkbox"
+	},
+	"metronic-solid-checkbox":{
+		"scope": "html,vue-html,mako",
+		"prefix": "met:checkbox",
+		"body": [
+			"<div class=\"checkbox-list\">",
+      "  <label class=\"checkbox\">",
+      "    <input type=\"checkbox\" name=\"Checkboxes1\"/>",
+      "      <span></span>",
+      "      Default",
+      "  </label>",
+      "  <label class=\"checkbox checkbox-disabled\">",
+      "      <input type=\"checkbox\" disabled=\"disabled\" checked=\"checked\" name=\"Checkboxes1\"/>",
+      "      <span></span>",
+      "      Disabled",
+      "  </label>",
+      "  <label class=\"checkbox\">",
+      "      <input type=\"checkbox\" checked=\"checked\" name=\"Checkboxes1\"/>",
+      "      <span></span>",
+      "      Checked",
+      "  </label>",
+			"</div>"
+		],
+		"description": "metronic-checkbox"
+	},
+	"metronic-solid-checkbox-inline":{
+		"scope": "html,vue-html,mako",
+		"prefix": "met:checkbox-inline",
+		"body": [
+			"<div class=\"checkbox-inline\">",
+      "  <label class=\"checkbox\">",
+      "    <input type=\"checkbox\" checked=\"checked\" name=\"Checkboxes3\"/>",
+      "    <span></span>",
+      "    Option 1",
+      "  </label>",
+      "  <label class=\"checkbox\">",
+      "    <input type=\"checkbox\" name=\"Checkboxes3\"/>",
+      "    <span></span>",
+      "    Option 2",
+      "  </label>",
+      "  <label class=\"checkbox\">",
+      "    <input type=\"checkbox\" checked=\"checked\" name=\"Checkboxes3\"/>",
+      "    <span></span>",
+      "    Option 3",
+      "  </label>",
+      "</div>"
+		],
+		"description": "metronic-checkbox-inline"
+	},
+	"metronic-outline-radio": {
+		"prefix": "met:outline-radio",
+		"body": [
+			"<div class=\"radio-list\">",
+			"  <label class=\"radio radio-outline radio-success\">",
+			"    <input type=\"radio\" name=\"radios15\"/>",
+			"    <span></span>",
+			"    Default",
+			"  </label>",
+			"  <label class=\"radio radio-outline radio-success\">",
+			"    <input type=\"radio\" name=\"radios15\" checked=\"checked\" />",
+			"    <span></span>",
+			"    Checked",
+			"  </label>",
+			"  <label class=\"radio radio-outline radio-success radio-disabled\">",
+			"    <input type=\"radio\" name=\"radios15\" disabled=\"disabled\"/>",
+			"    <span></span>",
+			"    Disabled",
+			"  </label>",
+			"</div>"
+		],
+		"description": "metronic-outline-radio"
+	},
+	"metronic-inline-outline-radio": {
+		"prefix": "met:outline-radio-inline",
+		"body": [
+			"<div class=\"radio-inline\">",
+			"  <label class=\"radio radio-outline radio-success\">",
+			"    <input type=\"radio\" name=\"radios15\"/>",
+			"    <span></span>",
+			"    Default",
+			"  </label>",
+			"  <label class=\"radio radio-outline radio-success\">",
+			"    <input type=\"radio\" name=\"radios15\" checked=\"checked\" />",
+			"    <span></span>",
+			"    Checked",
+			"  </label>",
+			"  <label class=\"radio radio-outline radio-success radio-disabled\">",
+			"    <input type=\"radio\" name=\"radios15\" disabled=\"disabled\"/>",
+			"    <span></span>",
+			"    Disabled",
+			"  </label>",
+			"</div>"
+		],
+		"description": "metronic-inline-outline-radio"
+	},
+	"metronic-solid-radio":{
+		"scope": "html,vue-html,mako",
+		"prefix": "met:radio",
+		"body": [
+			"<div class=\"radio-list\">",
+      "  <label class=\"radio\">",
+      "    <input type=\"radio\" name=\"radios1\"/>",
+      "    <span></span>",
+      "    Default",
+      "  </label>",
+      "  <label class=\"radio radio-disabled\">",
+      "    <input type=\"radio\" disabled=\"disabled\" checked=\"checked\" name=\"radios1\"/>",
+      "    <span></span>",
+      "    Disabled",
+      "  </label>",
+      "  <label class=\"radio\">",
+      "    <input type=\"radio\" checked=\"checked\" name=\"radios1\"/>",
+      "    <span></span>",
+      "    Checked",
+      "  </label>",
+      "</div>"
+		],
+		"description": "metronic-radio"
+	},
+	"metronic-solid-inline-radio":{
+		"scope": "html,vue-html,mako",
+		"prefix": "met:radio-inline",
+		"body": [
+			"<div class=\"radio-inline\">",
+			"  <label class=\"radio\">",
+			"    <input type=\"radio\" checked=\"checked\" name=\"radios3\"/>",
+			"    <span></span>",
+			"    Option 1",
+			"  </label>",
+			"  <label class=\"radio\">",
+			"    <input type=\"radio\" name=\"radios3\"/>",
+			"    <span></span>",
+			"    Option 2",
+			"  </label>",
+			"  <label class=\"radio\">",
+			"    <input type=\"radio\" checked=\"checked\" name=\"radios3\"/>",
+			"    <span></span>",
+			"    Option 3",
+			"  </label>",
+			"</div>"
+		],
+		"description": "metronic-inline-radio"
+	},
+	"metronic-table": {
+		"prefix": "met:table",
+		"body": [
+			"<table class=\"table\">",
+			"  <thead>",
+			"    <tr>",
+			"      <th scope=\"col\">#</th>",
+			"      <th scope=\"col\">First</th>",
+			"      <th scope=\"col\">Last</th>",
+			"      <th scope=\"col\">Status</th>",
+			"    </tr>",
+			"  </thead>",
+			"  <tbody>",
+			"    <tr>",
+			"      <th scope=\"row\">1</th>",
+			"      <td>Nick</td>",
+			"      <td>Stone</td>",
+			"      <td>",
+			"        <span class=\"label label-inline label-light-primary font-weight-bold\">",
+			"          Pending",
+			"        </span>",
+			"      </td>",
+			"    </tr>",
+			"  </tbody>",
+			"</table>"
+		],
+		"description": "metronic-table"
+	},
+	"metronic-border-table": {
+		"prefix": "met:table-border",
+		"body": [
+			"<table class=\"table table-bordered\">",
+			"  <thead>",
+			"    <tr>",
+			"      <th scope=\"col\">#</th>",
+			"      <th scope=\"col\">First</th>",
+			"      <th scope=\"col\">Last</th>",
+			"      <th scope=\"col\">Status</th>",
+			"    </tr>",
+			"  </thead>",
+			"  <tbody>",
+			"    <tr>",
+			"      <th scope=\"row\">1</th>",
+			"      <td>Nick</td>",
+			"      <td>Stone</td>",
+			"      <td>",
+			"        <span class=\"label label-inline label-light-primary font-weight-bold\">",
+			"          Pending",
+			"        </span>",
+			"      </td>",
+			"    </tr>",
+			"  </tbody>",
+			"</table>"
+		],
+		"description": "metronic-border-table"
+	},
+	"metronic-base-modal": {
+		"prefix": "met:base-modal",
+		"body": [
+			"<!-- Button trigger modal-->",
+			"<button type=\"button\" class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\"#exampleModalLong\">",
+			"  Launch demo modal",
+			"</button>",
+			"<!-- Modal-->",
+			"<div class=\"modal fade\" id=\"exampleModalLong\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"staticBackdrop\" aria-hidden=\"true\">",
+			"  <div class=\"modal-dialog\" role=\"document\">",
+			"    <div class=\"modal-content\">",
+			"      <div class=\"modal-header\">",
+			"        <h5 class=\"modal-title\" id=\"exampleModalLabel\">${1:title}</h5>",
+			"        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">",
+			"          <i aria-hidden=\"true\" class=\"ki ki-close\"></i>",
+			"        </button>",
+			"      </div>",
+			"      <div class=\"modal-body\">",
+			"        $0",
+			"      </div>",
+			"      <div class=\"modal-footer\">",
+			"        <button type=\"button\" class=\"btn btn-light-primary font-weight-bold\" data-dismiss=\"modal\">Close</button>",
+			"        <button type=\"button\" class=\"btn btn-primary font-weight-bold\">Save changes</button>",
+			"      </div>",
+			"    </div>",
+			"  </div>",
+			"</div>"
+		],
+		"description": "metronic-base-modal"
+	},
+	"metronic-vertically-centered-modal": {
+		"prefix": "met:vertically-centered-modal",
+		"body": [
+			"<!-- Button trigger modal-->",
+			"<button type=\"button\" class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\"#exampleModalLong\">",
+			"  Launch demo modal",
+			"</button>",
+			"<!-- Modal-->",
+			"<div class=\"modal fade\" id=\"exampleModalLong\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"staticBackdrop\" aria-hidden=\"true\">",
+			"  <div class=\"modal-dialog modal-dialog-centered\" role=\"document\">",
+			"    <div class=\"modal-content\">",
+			"      <div class=\"modal-header\">",
+			"        <h5 class=\"modal-title\" id=\"exampleModalLabel\">${1:title}</h5>",
+			"        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">",
+			"          <i aria-hidden=\"true\" class=\"ki ki-close\"></i>",
+			"        </button>",
+			"      </div>",
+			"      <div class=\"modal-body\">",
+			"        $0",
+			"      </div>",
+			"      <div class=\"modal-footer\">",
+			"        <button type=\"button\" class=\"btn btn-light-primary font-weight-bold\" data-dismiss=\"modal\">Close</button>",
+			"        <button type=\"button\" class=\"btn btn-primary font-weight-bold\">Save changes</button>",
+			"      </div>",
+			"    </div>",
+			"  </div>",
+			"</div>"
+		],
+		"description": "metronic-vertically-centered-modal"
+	},
+	"metronic-scrolling-long-content-modal": {
+		"prefix": "met:scrolling-long-content-modal",
+		"body": [
+			"<!-- Button trigger modal-->",
+			"<button type=\"button\" class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\"#exampleModalLong\">",
+			"  Launch demo modal",
+			"</button>",
+			"<!-- Modal-->",
+			"<div class=\"modal fade\" id=\"exampleModalLong\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"staticBackdrop\" aria-hidden=\"true\">",
+			"  <div class=\"modal-dialog modal-dialog-scrollable\" role=\"document\">",
+			"    <div class=\"modal-content\">",
+			"      <div class=\"modal-header\">",
+			"        <h5 class=\"modal-title\" id=\"exampleModalLabel\">${1:title}</h5>",
+			"        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">",
+			"          <i aria-hidden=\"true\" class=\"ki ki-close\"></i>",
+			"        </button>",
+			"      </div>",
+			"      <div class=\"modal-body\">",
+			"        $0",
+			"      </div>",
+			"      <div class=\"modal-footer\">",
+			"        <button type=\"button\" class=\"btn btn-light-primary font-weight-bold\" data-dismiss=\"modal\">Close</button>",
+			"        <button type=\"button\" class=\"btn btn-primary font-weight-bold\">Save changes</button>",
+			"      </div>",
+			"    </div>",
+			"  </div>",
+			"</div>"
+		],
+		"description": "metronic-scrolling-long-content-modal"
+	},
+	"metronic-pagination": {
+		"prefix": "met:pagination",
+		"body": [
+			"<div class=\"d-flex justify-content-between align-items-center flex-wrap\">",
+			"  <div class=\"d-flex flex-wrap py-2 mr-3\">",
+			"    <a href=\"#\" class=\"btn btn-icon btn-sm btn-light mr-2 my-1\"><i class=\"ki ki-bold-double-arrow-back icon-xs\"></i></a>",
+			"    <a href=\"#\" class=\"btn btn-icon btn-sm btn-light mr-2 my-1\"><i class=\"ki ki-bold-arrow-back icon-xs\"></i></a>",
+			"    <a href=\"#\" class=\"btn btn-icon btn-sm border-0 btn-light mr-2 my-1\">...</a>",
+			"    <a href=\"#\" class=\"btn btn-icon btn-sm border-0 btn-light mr-2 my-1\">23</a>",
+			"    <a href=\"#\" class=\"btn btn-icon btn-sm border-0 btn-light btn-hover-primary active mr-2 my-1\">24</a>",
+			"    <a href=\"#\" class=\"btn btn-icon btn-sm border-0 btn-light mr-2 my-1\">25</a>",
+			"    <a href=\"#\" class=\"btn btn-icon btn-sm border-0 btn-light mr-2 my-1\">26</a>",
+			"    <a href=\"#\" class=\"btn btn-icon btn-sm border-0 btn-light mr-2 my-1\">27</a>",
+			"    <a href=\"#\" class=\"btn btn-icon btn-sm border-0 btn-light mr-2 my-1\">28</a>",
+			"    <a href=\"#\" class=\"btn btn-icon btn-sm border-0 btn-light mr-2 my-1\">...</a>",
+			"    <a href=\"#\" class=\"btn btn-icon btn-sm btn-light mr-2 my-1\"><i class=\"ki ki-bold-arrow-next icon-xs\"></i></a>",
+			"    <a href=\"#\" class=\"btn btn-icon btn-sm btn-light mr-2 my-1\"><i class=\"ki ki-bold-double-arrow-next icon-xs\"></i></a>",
+			"  </div>",
+			"  <div class=\"d-flex align-items-center py-3\">",
+			"    <div class=\"d-flex align-items-center\">",
+			"      <div class=\"mr-2 text-muted\">載入中...</div>",
+			"      <div class=\"spinner mr-10\"></div>",
+			"    </div>",
+			"    <select class=\"form-control form-control-sm font-weight-bold mr-4 border-0 bg-light\" style=\"width: 75px;\">",
+			"      <option value=\"10\">10</option>",
+			"      <option value=\"20\">20</option>",
+			"      <option value=\"30\">30</option>",
+			"      <option value=\"50\">50</option>",
+			"      <option value=\"100\">100</option>",
+			"    </select>",
+			"    <span class=\"text-muted\">Displaying 10 of 230 records</span>",
+			"  </div>",
+			"</div>"
+		],
+		"description": "metronic-pagination"
+	},
+	"metronic-card": {
+		"prefix": "met:card",
+		"body": [
+			"<div class=\"card card-custom\">",
+			" <div class=\"card-header\">",
+			"  <div class=\"card-title\">",
+			"            <span class=\"card-icon\">",
+			"                <i class=\"flaticon2-chat-1 text-primary\"></i>",
+			"            </span>",
+			"   <h3 class=\"card-label\">",
+			"    Card Footer",
+			"    <small>sub title</small>",
+			"   </h3>",
+			"  </div>",
+			"        <div class=\"card-toolbar\">",
+			"            <a href=\"#\" class=\"btn btn-sm btn-success font-weight-bold\">",
+			"                <i class=\"flaticon2-cube\"></i> Reports",
+			"            </a>",
+			"        </div>",
+			" </div>",
+			" <div class=\"card-body\">",
+			"  ...",
+			" </div>",
+			"    <div class=\"card-footer d-flex justify-content-between\">",
+			"        <a href=\"#\" class=\"btn btn-light-primary font-weight-bold\">Manage</a>",
+			"        <a href=\"#\" class=\"btn btn-outline-secondary font-weight-bold\">Learn more</a>",
+			" </div>",
+			"</div>"
+		],
+		"description": "metronic-card"
+	},
+	"metronic-button_primary": {
+		"prefix": "met:btn-primary",
+		"body": [
+			"<button type=\"button\" class=\"btn btn-primary\">$0</button>"
+		],
+		"description": "metronic-button_primary"
+	},
+	"metronic-button_secondary": {
+		"prefix": "met:btn-secondary",
+		"body": [
+			"<button type=\"button\" class=\"btn btn-secondary\">$0</button>"
+		],
+		"description": "metronic-button_secondary"
+	},
+	"metronic-button_warning": {
+		"prefix": "met:btn-warning",
+		"body": [
+			"<button type=\"button\" class=\"btn btn-warning\">$0</button>"
+		],
+		"description": "metronic-button_warning"
+	},
+	"metronic-button_success": {
+		"prefix": "met:btn-success",
+		"body": [
+			"<button type=\"button\" class=\"btn btn-success\">$0</button>"
+		],
+		"description": "metronic-button_success"
+	},
+	"metronic-button_danger": {
+		"prefix": "met:btn-danger",
+		"body": [
+			"<button type=\"button\" class=\"btn btn-danger\">$0</button>"
+		],
+		"description": "metronic-button_danger"
+	},
+	"metronic-button_light_primary": {
+		"prefix": "met:btn-light-primary",
+		"body": [
+			"<button type=\"button\" class=\"btn btn-light-primary\">$0</button>"
+		],
+		"description": "metronic-button_light_primary"
+	},
+	"metronic-button_light_secondary": {
+		"prefix": "met:btn-light-secondary",
+		"body": [
+			"<button type=\"button\" class=\"btn btn-light-secondary\">$0</button>"
+		],
+		"description": "metronic-button_light_secondary"
+	},
+	"metronic-button_light_warning": {
+		"prefix": "met:btn-light-warning",
+		"body": [
+			"<button type=\"button\" class=\"btn btn-light-warning\">$0</button>"
+		],
+		"description": "metronic-button_light_warning"
+	},
+	"metronic-button_light_success": {
+		"prefix": "met:btn-light-success",
+		"body": [
+			"<button type=\"button\" class=\"btn btn-light-success\">$0</button>"
+		],
+		"description": "metronic-button_light_success"
+	},
+	"metronic-button_light_danger": {
+		"prefix": "met:btn-light-danger",
+		"body": [
+			"<button type=\"button\" class=\"btn btn-light-danger\">$0</button>"
+		],
+		"description": "metronic-button_light_danger"
+	},
+	"metronic-button_hover_light_primary": {
+		"prefix": "met:btn-hover-light-primary",
+		"body": [
+			"<button type=\"button\" class=\"btn btn-text-primary btn-hover-light-primary\">$0</button>"
+		],
+		"description": "metronic-button_hover_light_primary"
+	},
+	"metronic-button_hover_light_secondary": {
+		"prefix": "met:btn-hover-light-secondary",
+		"body": [
+			"<button type=\"button\" class=\"btn btn-text-secondary btn-hover-light-secondary\">$0</button>"
+		],
+		"description": "metronic-button_hover_light_secondary"
+	},
+	"metronic-button_hover_light_warning": {
+		"prefix": "met:btn-hover-light-warning",
+		"body": [
+			"<button type=\"button\" class=\"btn btn-text-warning btn-hover-light-warning\">$0</button>"
+		],
+		"description": "metronic-button_hover_light_warning"
+	},
+	"metronic-button_hover_light_success": {
+		"prefix": "met:btn-hover-light-success",
+		"body": [
+			"<button type=\"button\" class=\"btn btn-text-success btn-hover-light-success\">$0</button>"
+		],
+		"description": "metronic-button_hover_light_success"
+	},
+	"metronic-button_hover_light_danger": {
+		"prefix": "met:btn-hover-light-danger",
+		"body": [
+			"<button type=\"button\" class=\"btn btn-text-danger btn-hover-light-danger\">$0</button>"
+		],
+		"description": "metronic-button_hover_light_danger"
+	},
+	"metronic-button_outline_primary": {
+		"prefix": "met:btn-outline-primary",
+		"body": [
+			"<button type=\"button\" class=\"btn btn-outline-primary\">$0</button>"
+		],
+		"description": "metronic-button_outline_primary"
+	},
+	"metronic-button_outline_secondary": {
+		"prefix": "met:btn-outline-secondary",
+		"body": [
+			"<button type=\"button\" class=\"btn btn-outline-secondary\">$0</button>"
+		],
+		"description": "metronic-button_outline_secondary"
+	},
+	"metronic-button_outline_warning": {
+		"prefix": "met:btn-outline-warning",
+		"body": [
+			"<button type=\"button\" class=\"btn btn-outline-warning\">$0</button>"
+		],
+		"description": "metronic-button_outline_warning"
+	},
+	"metronic-button_outline_success": {
+		"prefix": "met:btn-outline-success",
+		"body": [
+			"<button type=\"button\" class=\"btn btn-outline-success\">$0</button>"
+		],
+		"description": "metronic-button_outline_success"
+	},
+	"metronic-button_outline_danger": {
+		"prefix": "met:btn-outline-danger",
+		"body": [
+			"<button type=\"button\" class=\"btn btn-outline-danger\">$0</button>"
+		],
+		"description": "metronic-button_outline_danger"
+	},
+}

@@ -1,0 +1,25 @@
+{
+    "name": "double-cash-snippet",
+    "displayName": "double-cash-snippet",
+    "description": "double-cash used snippet",
+    "version": "0.0.1",
+    "publisher": "WilsonWu",
+    "engines": {
+        "vscode": "^1.55.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Ceelog/text2qrcode.git"
+    },
+    "contributes": {
+        "snippets": [
+            {
+                "language": "html",
+                "path": "./snippets/snippets.code-snippets"
+            }
+        ]
+    }
+}
